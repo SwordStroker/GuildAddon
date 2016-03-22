@@ -7,10 +7,10 @@ function GuildAddon.GuildPlayerStatusChanged(event,guildId,playerName,prevStatus
 	GuildAddon.guildName = GetGuildName(guildId)
   if GuildAddon.savedVariables ~= nil then
     if curStatus == 1 and GuildAddon.savedVariables[GuildAddon.guildName] then
-    CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString().. "]|r " .. GuildAddon.var.color.colGreen .. GuildAddon.guildName .. ": ".. GuildAddon.var.color.colTeal ..  playerName .. GuildAddon.var.color.colWhite .." has" .. GuildAddon.var.color.colWhite.. " came" .. GuildAddon.var.color.colGreen .. " Online")
+    CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString() .. "]|r " .. GuildAddon.var.color.colGreen .. GuildAddon.guildName .. ": ".. GuildAddon.var.color.colTeal ..  playerName .. GuildAddon.var.color.colWhite .." is" .. " Online")
     end
     if curStatus == 4 and GuildAddon.savedVariables[GuildAddon.guildName] then
-      CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString().. "]|r " .. GuildAddon.var.color.colGreen .. GuildAddon.guildName .. ": ".. GuildAddon.var.color.colTeal ..  playerName .. GuildAddon.var.color.colWhite .." has" .. GuildAddon.var.color.colWhite.. " gone" .. GuildAddon.var.color.colRed .. " Offline")	
+      CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString().. "]|r " .. GuildAddon.var.color.colGreen .. GuildAddon.guildName .. ": ".. GuildAddon.var.color.colTeal ..  playerName .. GuildAddon.var.color.colWhite .." is" .. " Offline")	
     end
   end
 end
@@ -30,12 +30,14 @@ local function GuildMemberRemoved(event,guildId,displayName,characterName)
 end
 
 local function GuildSelfJoin(event,guildId,guildName)
-  CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString() .. "]|r " .. GuildAddon.var.color.colGreen .. "Congratulations!"  .. GuildAddon.var.color.colWhite " You are joined to ".. GuildAddon.var.color.colGreen .. guildName)
+  CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString() .. "]|r " .. GuildAddon.var.color.colGreen .. "Congratulations!"  .. GuildAddon.var.color.colWhite .. " You are joined to ".. GuildAddon.var.color.colGreen .. guildName)
+  -- TO DO : // Run reloadUI here.
   CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "Please type /reloadui for make the addon work properly :)")
 end
 
 local function GuildSelfLeave(event,guildId,guildName)
-  CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString() .. "]|r " .. GuildAddon.var.color.colWhite " You" .. GuildAddon.var.color.colRed .." left ".. GuildAddon.var.color.colWhite .. guildName)
+  CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "[" .. GetTimeString() .. "]|r " .. GuildAddon.var.color.colWhite .. " You" .. GuildAddon.var.color.colRed .." left ".. GuildAddon.var.color.colWhite .. guildName)
+  -- TO DO : // Run reloadUI here.
   CHAT_SYSTEM:AddMessage(GuildAddon.var.color.colWhite .. "Please type /reloadui for make the addon work properly :)")
 end
 

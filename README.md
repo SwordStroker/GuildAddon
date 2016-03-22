@@ -16,7 +16,9 @@ With this addon you can see what's going on in your guild(s) :)
 >     ![Capture4.png](https://bitbucket.org/repo/ed84EX/images/605144840-Capture4.png)
 >
 > 2.     When someone levels up,it'll be written on chat.
+>
 > 3.     When someone joins or leaves the guild it'll be written on chat.
+>
 > 4.     When you join or leave a guild it'll be written on chat.
 
 > More features will be come in time :)
